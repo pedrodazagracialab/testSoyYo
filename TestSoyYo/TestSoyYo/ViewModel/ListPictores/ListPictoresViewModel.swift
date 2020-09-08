@@ -61,9 +61,8 @@ class ListPictoresViewModel {
                 
             }
         }, error: {err in
-            self.getPictoreDayOfDay(i: i + 1, nasaPictores : nasaPictores1, ok:  { nasaPictore1 in
-            
-            })
+            SwiftSpinner.hide()
+            self.informationHealthyLifeViewToViewModel?.showError(error: "En este momento no podemos completar tu consulta")
         })
     }
     func getPictoreOfDate(date:Date, ok: @escaping ((NASAPictore) -> Void), error: @escaping ((String) -> Void)) {
