@@ -10,7 +10,7 @@ import UIKit
 
 class GradiantView: UIView {
     
-    var colorAverage = UIColor.white
+    var colorAverage = UIColor.clear
     @IBOutlet weak var contentView: UIView!
     
     private var isFirstCall = false

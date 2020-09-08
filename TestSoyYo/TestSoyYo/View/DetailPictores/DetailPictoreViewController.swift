@@ -28,11 +28,12 @@ class DetailPictoreViewController: UIViewController {
         if let image = collapserView.pictoreImageView.image {
             if let color = image.averageColor {
                 collapserView.setData(color: color, scrollView: generalScrollView)
+                return
             }
             
         }
         
-        
+        collapserView.setData(color: UIColor.clear, scrollView: generalScrollView)
     }
     // MARK: - SetUp
     func setUp() {
